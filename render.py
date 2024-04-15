@@ -12,7 +12,7 @@ def id():
     if request.method == 'POST':
         file=request.form['file']
         f=open(f'files/{file}', 'rb')
-        return render_tenplate('index.html',content=str(f.read().decode()))
+        return render_template('index.html',content=str(f.read().decode()))
     else:
         return "Method not allow"
 
