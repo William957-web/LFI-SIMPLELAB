@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Viewer</title>
+</head>
+<body>
+    <h1>File Viewer</h1>
+    <form action="/getfile" method="POST">
+        <label for="file">Enter file name:</label><br>
+        <input type="text" id="file" name="file"><br><br>
+        <input type="submit" value="View File">
+    </form>
+<br>eat.txt</br>
+<br>wth.txt</br>
+    {% if content %}
+        <h2>File Content:</h2>
+        <pre>{{ content|markdown }}</pre>
+    {% endif %}
+</body>
+</html>
